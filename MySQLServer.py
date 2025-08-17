@@ -17,9 +17,8 @@ def create_database():
         cursor = cnx.cursor()
 
         # SQL statement to create the database if it doesn't exist
-        # Using a parameterized query to prevent SQL injection, though simple in this case
         db_name = "alx_book_store"
-        query = "CREATE DATABASE IF NOT EXISTS {}".format(db_name)
+        query = f"CREATE DATABASE IF NOT EXISTS {db_name}"
 
         # Execute the query
         cursor.execute(query)
